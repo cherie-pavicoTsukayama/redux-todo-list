@@ -9,22 +9,21 @@ import {
   addTodo,
   toggleTodo,
   setVisibilityFilter,
-  VisibilityFilters,
-  VisibilityFilteres
+  VisibilityFilters
 } from './actions';
 
 const store = createStore(todoApp, window.STATE_FROM_SERVER)
 
 console.log('store get state:', store.getState());
 
-const unsubscribe = store.subscrive(() => console.log(store.getState()));
+const unsubscribe = store.subscribe(() => console.log(store.getState()));
 
 store.dispatch(addTodo('Learn about actions'));
 store.dispatch(addTodo('Learn about reducers'))
 store.dispatch(addTodo('Learn about store'));
 store.dispatch(toggleTodo(0));
 store.dispatch(toggleTodo(1));
-store.dispatch(VisibilityFilteres.SHOW_COMPLETED);
+store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
 
 unsubscribe();
 
