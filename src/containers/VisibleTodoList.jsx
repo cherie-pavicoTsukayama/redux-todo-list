@@ -11,7 +11,7 @@ const getVisibleTodos = (todos, filter) => {
     case 'SHOW_ACTIVE':
       return todos.filter(t => !t.completed);
     default:
-      return todos;
+      throw new Error('Unknown filter: ' + filter)
   }
 }
 
@@ -21,13 +21,10 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onTodoClick: id => {
-      dispatch(toggleTodo(id))
-    }
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  toggleTodo: id => dispatch(toggleTodo(id))
+});
+
 
 const VisibleTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList);
 

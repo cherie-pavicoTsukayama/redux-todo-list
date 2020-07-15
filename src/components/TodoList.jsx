@@ -1,14 +1,17 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todos, onTodoClick }) => {
-  return(
+const TodoList = ({ todos, toggleTodo }) => {
+  console.log('todos:',todos)
+  return (
+
     <ul>
       {todos.map((todo, index) => (
-        <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
+        <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
       ))}
     </ul>
-  )
-}
+
+)
+      }
 
 export default TodoList;

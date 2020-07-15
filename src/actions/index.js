@@ -8,17 +8,19 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
+let nextTodoId = 0;
 export const addTodo = (text) => {
   return {
     type: ADD_TODO,
-    payload: text
+    payload: text,
+    id: nextTodoId++
   }
 }
 
-export const toggleTodo = (index) => {
+export const toggleTodo = (id) => {
   return {
     type: TOGGLE_TODO,
-    payload: index
+    payload: id
   }
 }
 
