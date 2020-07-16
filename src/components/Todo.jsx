@@ -4,6 +4,7 @@ import React from 'react';
 const Todo = ({onClick, completed, text}) => {
   return(
     <li
+      className="thin-grey-border"
       onClick={onClick}
       style={{
         textDecoration: completed ? 'line-through' : 'none'

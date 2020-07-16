@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.satisfy-font {
+  font-family: 'Satisfy', sans-serif;
+}
+
+.montserrat-400 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.montserrat-600 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.montserrat-900 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+.thin-grey-border {
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+}
+
+input {
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+}
