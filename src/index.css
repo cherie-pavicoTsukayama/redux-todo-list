@@ -67,3 +67,11 @@ li {
 .view-container {
   height: 250px;
 }
+
+.red:hover {
+  color: red;
+}
+
+.green-hover:hover {
+  color: green;
+}

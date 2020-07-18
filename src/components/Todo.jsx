@@ -21,8 +21,9 @@ const Todo = ({onClick, completed, text}) => {
             {text}
           </span>
         </div>
-        <div className="col d-flex justify-content-end">
-          <i className="fas fa-pencil-alt light-grey pointer"></i>
+        <div className="col d-flex justify-content-between">
+          <i className="fas fa-pencil-alt light-grey pointer green-hover"></i>
+          <i className="fas fa-trash-alt light-grey pointer red"></i>
         </div>
         </div>
 
