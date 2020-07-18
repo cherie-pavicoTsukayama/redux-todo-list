@@ -6,8 +6,9 @@ let AddTodo =({ dispatch }) => {
   let input
 
   return (
-    <div>
+    <div className="col-9">
       <form
+        className="d-flex"
         onSubmit={event => {
           event.preventDefault();
           if (!input.value.trim()) {
@@ -18,11 +19,15 @@ let AddTodo =({ dispatch }) => {
         }}
       >
         <input
+          className="col-9 ml-4"
+          placeholder="New Todo"
           ref={node => {
             input = node
           }}
         />
-        <button type="submit">Add Todo</button>
+        <div className="col-3 p-0 d-flex justify-content-end">
+          <button className="col-10 btn btn-primary montserrat-400"  type="submit">Add Todo</button>
+        </div>
       </form>
     </div>
   )

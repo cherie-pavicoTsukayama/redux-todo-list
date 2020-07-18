@@ -11,3 +11,67 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.satisfy-font {
+  font-family: 'Satisfy', sans-serif;
+}
+
+.montserrat-400 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.montserrat-600 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.montserrat-900 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+.thin-grey-border {
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+}
+
+input {
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.selected-border {
+  border-radius: 0;
+  border-bottom: 1px solid rgb(62, 158, 218);
+  color: rgb(62, 158, 218)
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.light-grey {
+  color: #C4C4C4;
+}
+
+.green {
+  color: green;
+}
+
+.view-container {
+  height: 250px;
+}
+
+.red:hover {
+  color: red;
+}
+
+.green-hover:hover {
+  color: green;
+}

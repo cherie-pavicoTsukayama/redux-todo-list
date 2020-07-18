@@ -3,11 +3,14 @@ import FilterLink from '../containers/FilterLink';
 import { VisibilityFilters } from '../actions';
 
 const Footer = () => (
-  <p>
-    Show: <FilterLink filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
-    Show: <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
-    Show: <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Completed</FilterLink>
-  </p>
+  <div className="thin-grey-border col-3 d-flex flex-wrap justify-content-center py-3 view-container">
+    <h3 className="montserrat-400 text-center">View</h3>
+    <FilterLink filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
+    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
+    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Completed</FilterLink>
+
+  </div>
+
 )
 
 export default Footer;
