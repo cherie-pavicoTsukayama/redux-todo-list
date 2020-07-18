@@ -7,7 +7,7 @@ const Link = ({ active, children, onClick }) => {
   return (
     <div className="col-12">
       <h6
-        className={`col pointer my-2 text-center ${style}`}
+        className={`col pointer my-2 text-center py-2 ${style}`}
         onClick={onClick}
         disabled={active}
       >

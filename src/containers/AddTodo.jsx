@@ -19,7 +19,7 @@ let AddTodo =({ dispatch }) => {
         }}
       >
         <input
-          className="col-9"
+          className="col-9 ml-4"
           placeholder="New Todo"
           ref={node => {
             input = node

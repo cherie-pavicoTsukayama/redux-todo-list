@@ -5,11 +5,13 @@ const TodoList = ({ todos, toggleTodo }) => {
   console.log('todos:',todos)
   return (
 
-    <ul className='col-9'>
-      {todos.map((todo, index) => (
-        <Todo key={todo.id + index} {...todo} onClick={() => toggleTodo(todo.id)} />
-      ))}
-    </ul>
+      <ul className='col-9'>
+        {todos.map((todo, index) => (
+          <Todo key={todo.id + index} {...todo} onClick={() => toggleTodo(todo.id)} />
+        ))}
+      </ul>
+
+
 
 )
       }
