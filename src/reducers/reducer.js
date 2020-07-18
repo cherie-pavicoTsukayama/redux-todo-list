@@ -8,7 +8,7 @@ import {combineReducers} from 'redux';
 
 const { SHOW_ALL } = VisibilityFilters;
 
-function todos(state = [], action) {
+function todos(state =[{text: 'go get dog food', completed: false}], action) {
   switch(action.type) {
     case ADD_TODO:
       return [

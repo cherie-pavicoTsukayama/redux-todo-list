@@ -6,12 +6,13 @@ const Todo = ({onClick, completed, text}) => {
   return(
       <li
         className="thin-grey-border ml-4 col-12 p-4 "
-        onClick={onClick}
+
 
       >
       <div className="d-flex align-items-center justify-content-between">
         <div className="d-flex align-items-center col-10 pl-0">
-          <i className={`${icon} mr-4 fa-2x `}></i>
+          <i className={`${icon} mr-4 fa-2x `}
+            onClick={onClick}></i>
           <span
             style={{
               textDecoration: completed ? 'line-through' : 'none'

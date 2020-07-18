@@ -20,12 +20,8 @@ const TodoList = ({ todos, toggleTodo }) => {
 
       <ul className='col-9'>
         {renderTodos()}
-        
       </ul>
-
-
-
-)
-      }
+  )
+}
 
 export default TodoList;
