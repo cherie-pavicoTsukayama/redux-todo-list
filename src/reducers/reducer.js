@@ -8,19 +8,20 @@ import {combineReducers} from 'redux';
 
 const { SHOW_ALL } = VisibilityFilters;
 
-function todos(state =[{text: 'go get dog food', completed: false}], action) {
+function todos(state =[], action) {
   switch(action.type) {
     case ADD_TODO:
       return [
         ...state,
         {
           text: action.payload,
-          completed: false
+          completed: false,
+          id: action.id
         }
       ];
     case TOGGLE_TODO:
       return state.map(todo => {
-        if (todo.id === action.id) {
+        if (todo.id === action.payload) {
           return Object.assign({}, todo, {
             completed: !todo.completed
           })

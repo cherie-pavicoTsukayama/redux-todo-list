@@ -5,7 +5,7 @@ const Todo = ({onClick, completed, text}) => {
   const icon = !completed ? 'far fa-circle light-grey pointer' : 'fas fa-check-circle green pointer'
   return(
       <li
-        className="thin-grey-border ml-4 col-12 p-4 "
+        className="thin-grey-border ml-4 col-12 p-4 mb-3 "
 
 
       >

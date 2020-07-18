@@ -3,7 +3,7 @@ import FilterLink from '../containers/FilterLink';
 import { VisibilityFilters } from '../actions';
 
 const Footer = () => (
-  <div className="thin-grey-border col-3 d-flex flex-wrap justify-content-center py-3">
+  <div className="thin-grey-border col-3 d-flex flex-wrap justify-content-center py-3 view-container">
     <h3 className="montserrat-400 text-center">View</h3>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>

@@ -63,3 +63,7 @@ li {
 .green {
   color: green;
 }
+
+.view-container {
+  height: 250px;
+}
