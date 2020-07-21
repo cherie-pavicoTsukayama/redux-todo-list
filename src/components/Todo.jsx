@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types'
 
-const Todo = ({onClick, completed, text}) => {
+const Todo = ({onClick, completed, text, deleteTodo}) => {
   const icon = !completed ? 'far fa-circle light-grey pointer' : 'fas fa-check-circle green pointer'
   return(
       <li
@@ -23,7 +23,9 @@ const Todo = ({onClick, completed, text}) => {
         </div>
         <div className="col d-flex justify-content-between">
           <i className="fas fa-pencil-alt light-grey pointer green-hover"></i>
-          <i className="fas fa-trash-alt light-grey pointer red"></i>
+          <i
+            className="fas fa-trash-alt light-grey pointer red"
+            onClick={deleteTodo}></i>
         </div>
         </div>
 
