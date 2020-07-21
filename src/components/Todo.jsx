@@ -2,8 +2,10 @@ import React from 'react';
 import EditTodo from './EditTodo'
 // import PropTypes from 'prop-types'
 
-const Todo = ({onClick, completed, text, deleteTodo, toggleEditMode}) => {
+const Todo = ({onClick, completed, text, deleteTodo, toggleEditMode, editMode}) => {
   const icon = !completed ? 'far fa-circle light-grey pointer' : 'fas fa-check-circle green pointer'
+  const textBody = !editMode ? text  : <EditTodo text={text} />
+
   return(
       <li
         className="thin-grey-border ml-4 col-12 p-4 mb-3 "
@@ -19,7 +21,8 @@ const Todo = ({onClick, completed, text, deleteTodo, toggleEditMode}) => {
               textDecoration: completed ? 'line-through' : 'none'
             }}
           >
-            <EditTodo text={text}/>
+            {textBody}
+            {/* <EditTodo text={text}/> */}
             {/* {text} */}
           </span>
         </div>
