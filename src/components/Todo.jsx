@@ -1,7 +1,8 @@
 import React from 'react';
+import EditTodo from './EditTodo'
 // import PropTypes from 'prop-types'
 
-const Todo = ({onClick, completed, text, deleteTodo}) => {
+const Todo = ({onClick, completed, text, deleteTodo, toggleEditMode}) => {
   const icon = !completed ? 'far fa-circle light-grey pointer' : 'fas fa-check-circle green pointer'
   return(
       <li
@@ -18,14 +19,19 @@ const Todo = ({onClick, completed, text, deleteTodo}) => {
               textDecoration: completed ? 'line-through' : 'none'
             }}
           >
-            {text}
+            <EditTodo text={text}/>
+            {/* {text} */}
           </span>
         </div>
         <div className="col d-flex justify-content-between">
-          <i className="fas fa-pencil-alt light-grey pointer green-hover"></i>
+          <i
+            className="fas fa-pencil-alt light-grey pointer green-hover"
+            onClick={toggleEditMode}
+          ></i>
           <i
             className="fas fa-trash-alt light-grey pointer red"
-            onClick={deleteTodo}></i>
+            onClick={deleteTodo}
+          ></i>
         </div>
         </div>
 
