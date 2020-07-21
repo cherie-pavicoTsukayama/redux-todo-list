@@ -3,7 +3,8 @@ import {
   SET_VISIBILITY_FILTER,
   ADD_TODO,
   TOGGLE_TODO,
-  DELETE_TODO
+  DELETE_TODO,
+  EDIT_TODO,
 } from '../actions';
 import {combineReducers} from 'redux';
 
@@ -32,6 +33,15 @@ function todos(state =[], action) {
     case DELETE_TODO:
         const newState = state.filter(todo => todo.id !== action.payload);
         return newState;
+    case EDIT_TODO:
+      return state.map(todo => {
+        if (todo.id === action.payload.todoId) {
+          return Object.assign({}, todo, {
+            text: action.payload.todoText
+          })
+        }
+        return todo;
+      })
       default:
         return state;
   }
