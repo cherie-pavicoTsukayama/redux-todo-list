@@ -5,8 +5,12 @@ const EditTodo = ({todo, id, editTodo}) => {
   return (
     <div>
       <form>
-        <input type="text-area" value={todo.text} onChange={(event) => editTodo(id, event.target.value)}/>
-        <button>Update</button>
+        <textarea
+          type="text-area"
+          className="form-control"
+          value={todo.text}
+          onChange={(event) => editTodo(id, event.target.value)}
+        />
       </form>
     </div>
   )
