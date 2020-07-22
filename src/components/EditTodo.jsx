@@ -1,10 +1,11 @@
 import React from 'react';
 
-const EditTodo = ({text, id}) => {
+const EditTodo = ({todo, id, editTodo}) => {
+
   return (
     <div>
       <form>
-        <input type="text-area" value={text }/>
+        <input type="text-area" value={todo.text} onChange={(event) => editTodo(id, event.target.value)}/>
         <button>Update</button>
       </form>
     </div>
