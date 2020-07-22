@@ -3,7 +3,9 @@ import {
   SET_VISIBILITY_FILTER,
   ADD_TODO,
   TOGGLE_TODO,
-  DELETE_TODO
+  DELETE_TODO,
+  EDIT_TODO,
+  TOGGLE_EDIT_MODE,
 } from '../actions';
 import {combineReducers} from 'redux';
 
@@ -17,7 +19,8 @@ function todos(state =[], action) {
         {
           text: action.payload,
           completed: false,
-          id: action.id
+          id: action.id,
+          editMode: false
         }
       ];
     case TOGGLE_TODO:
@@ -32,8 +35,26 @@ function todos(state =[], action) {
     case DELETE_TODO:
         const newState = state.filter(todo => todo.id !== action.payload);
         return newState;
-      default:
-        return state;
+    case EDIT_TODO:
+      return state.map(todo => {
+        if (todo.id === action.payload.todoId) {
+          return Object.assign({}, todo, {
+            text: action.payload.todoText
+          })
+        }
+        return todo;
+      })
+    case TOGGLE_EDIT_MODE:
+      return state.map(todo => {
+        if (todo.id === action.payload) {
+          return Object.assign({}, todo, {
+            editMode: !todo.editMode
+          })
+        }
+        return todo;
+      })
+    default:
+      return state;
   }
 }
 

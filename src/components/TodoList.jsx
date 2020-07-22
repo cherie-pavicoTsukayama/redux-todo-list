@@ -1,7 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
+const TodoList = ({ todos, toggleTodo, deleteTodo, toggleEditMode, editTodo }) => {
 
 
   function renderTodos () {
@@ -14,6 +14,7 @@ const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
               key={todo.id} {...todo}
               onClick={() => toggleTodo(todo.id)}
               deleteTodo={() => deleteTodo(todo.id)}
+              toggleEditMode={() => toggleEditMode(todo.id)}
             />
           ))
       )

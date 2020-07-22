@@ -75,3 +75,7 @@ li {
 .green-hover:hover {
   color: green;
 }
+
+.v-hidden {
+  visibility: hidden;
+}

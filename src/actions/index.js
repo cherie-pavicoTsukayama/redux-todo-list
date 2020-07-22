@@ -2,6 +2,8 @@ export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 export const DELETE_TODO = 'DELETE_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+export const TOGGLE_EDIT_MODE = 'TOGGLE_EDIT_MODE';
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
@@ -38,3 +40,21 @@ export const deleteTodo = (id) => {
     payload: id
   }
 }
+
+export const editTodo = (id, text) => {
+  return {
+    type: EDIT_TODO,
+    payload: {
+      todoId: id,
+      todoText: text
+    }
+  }
+}
+
+export const toggleEditMode = (id) => {
+  return {
+    type: TOGGLE_EDIT_MODE,
+    payload: id
+  }
+}
+
