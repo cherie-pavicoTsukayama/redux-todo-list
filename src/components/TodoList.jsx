@@ -1,7 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todos, toggleTodo, deleteTodo, toggleEditMode }) => {
+const TodoList = ({ todos, toggleTodo, deleteTodo, toggleEditMode, editTodo }) => {
 
 
   function renderTodos () {

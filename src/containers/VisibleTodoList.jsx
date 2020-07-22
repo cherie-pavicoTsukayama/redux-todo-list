@@ -24,7 +24,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id)),
   deleteTodo: id => dispatch(deleteTodo(id)),
-  toggleEditMode: id => dispatch(toggleEditMode(id))
+  toggleEditMode: id => dispatch(toggleEditMode(id)),
 });
 
 

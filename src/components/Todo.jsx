@@ -1,10 +1,11 @@
 import React from 'react';
-import EditTodo from './EditTodo'
+import HandleChangeEditTodo from '../containers/EditTodo';
+
 // import PropTypes from 'prop-types'
 
-const Todo = ({onClick, completed, text, deleteTodo, toggleEditMode, editMode}) => {
+const Todo = ({onClick, completed, text, deleteTodo, toggleEditMode, editMode, id}) => {
   const icon = !completed ? 'far fa-circle light-grey pointer' : 'fas fa-check-circle green pointer'
-  const textBody = !editMode ? text  : <EditTodo text={text} />
+  const textBody = !editMode ? text  : <HandleChangeEditTodo id={id}/>
 
   return(
       <li

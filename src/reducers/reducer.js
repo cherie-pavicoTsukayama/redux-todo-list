@@ -5,7 +5,7 @@ import {
   TOGGLE_TODO,
   DELETE_TODO,
   EDIT_TODO,
-  TOGGLE_EDIT_MODE
+  TOGGLE_EDIT_MODE,
 } from '../actions';
 import {combineReducers} from 'redux';
 
