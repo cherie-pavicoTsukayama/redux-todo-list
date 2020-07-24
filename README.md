@@ -13,7 +13,7 @@ A React and Redux application for users to keep track of their todos for the day
 - CSS3
 
 ## Live Demo
-Coming Soon!
+https://todo-redux.cheriepavico.com/
 
 ## Features
 1. User can add a todo
